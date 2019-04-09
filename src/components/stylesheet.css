@@ -1,0 +1,35 @@
+body{
+    margin:0;
+}
+.search{
+    display:flex;
+    flex-flow:row;
+    justify-content: center;
+    align-items:center;
+    color:white;
+}
+.searchtext{
+    margin-left:25px;
+}
+.elem{
+    margin-left:100px;
+}
+.tabs{
+    width:100%;
+}
+.tab{
+    width:1000%;
+}
+.productdetail{
+    margin:300px;
+}
+.root{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.toolbar{
+    display:flex;
+    justify-content: flex-start;
+    flex-flow:row;
+}
