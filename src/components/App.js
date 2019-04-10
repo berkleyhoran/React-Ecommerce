@@ -34,7 +34,7 @@ class App extends Component {
       history.push('/list')
     }
     else if(value === 'three'){
-      history.push('/detail')
+      history.push('/detail/1')
     }
   }
 
@@ -73,7 +73,7 @@ class App extends Component {
         </AppBar>
           <Route path='/list' component={List} />
           <Route path='/cart' component={Cart} /> 
-          <Route path='/detail' component={ProductDetail} /> 
+          <Route path='/detail/:productId' component={ProductDetail} /> 
         </Router>
       </>
 
