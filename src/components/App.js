@@ -63,7 +63,6 @@ class App extends Component {
   
               <Tabs value={value} onChange={this.handleChange} className="tabs">
                 <Tab value="one" label="list" className="tab"></Tab>
-                <Tab value="three" label="detail" className="tab"></Tab>
                 <Tab value="two" label="cart" className="tab"></Tab>
               </Tabs>
 

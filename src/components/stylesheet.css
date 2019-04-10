@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 body{
     margin:0;
 }
@@ -50,7 +51,8 @@ body{
     height:10%;
 }
 .productdetail{
-    margin:300px;
+    margin:25%;
+    width:50%;
 }
 .root{
     display:flex;
@@ -106,4 +108,60 @@ body{
 }
 .productimage{
     height:100%;
+}
+.buttonsContainer{
+    width:100%;
+    margin:5px;
+    margin-left:0px;
+    display:flex;
+    justify-content: left;
+    align-items: flex-start;
+}
+.productButtons{
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    height:25px;
+    background-color:#3596F3;
+    border-radius:10px;
+    padding:10px;
+    margin:5px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.productButtons:hover{
+    cursor: pointer;
+    background-color: white;
+    color:#3596F3;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.productimage{
+    display:flex;
+}
+.product{
+    height:100%;
+}
+.productBody{
+    margin-top:-150px;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.single{
+    padding:100px;
+}
+.link{
+    margin:0px;
+    padding:0px;
+}
+.select{
+    width:75px;
+}
+a {
+    text-decoration: none
 }
