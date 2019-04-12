@@ -70,7 +70,7 @@ class App extends Component {
 
           </Toolbar>
         </AppBar>
-          <Route path='/list' component={List} />
+          <Route path='/list/:search' component={List} />
           <Route path='/cart' component={Cart} /> 
           <Route path='/detail/:productId' component={ProductDetail} /> 
         </Router>

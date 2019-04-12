@@ -15,9 +15,17 @@ const CheckedifLoaded = (props) => {
                 <div className="listContainer">
                     {
                         props.data.items.map(item => {
+                            let match = 'hide';
+                            if(item.title.match(props.data.search)){
+                                match = 'show';
+                            }
+                            else{
+                                match = 'hide';
+                            }
+                            console.log(match)
                             return(
-                                <Link to={`/detail/${item.id}`} className="title" key={item.id} >
-                                    <div className="productContainer" onClick={props.click}>
+                                <Link to={`/detail/${item.id}`} key={item.id} className={match}>
+                                    <div className={`productContainer`} onClick={props.click} >
                                         <div className="productImageContainer">
                                             <img className="productImage" alt={item.title} src={(item.img)}></img>
                                         </div>
@@ -50,7 +58,8 @@ class List extends Component{
             items: [],
             isLoaded: false,
             redirect: false,
-            id: -1
+            id: -1,
+            search: this.props.match.params.search
         };
     }
 
@@ -72,7 +81,7 @@ class List extends Component{
     render() {
 
             return(
-                <CheckedifLoaded data={this.state} click={this.handleClick} />
+                <CheckedifLoaded data={this.state} click={this.handleClick} search={this.state.search} />
             )
             
     }
