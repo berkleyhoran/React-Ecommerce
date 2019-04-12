@@ -5,42 +5,39 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
-import {
-    Link
-  } from "react-router-dom";
+import { Link } from "react-router-dom";
+import {connect} from 'react-redux'
 
-const styles = theme => ({
-    root: {
-      display: 'flex',
-      flexWrap: 'wrap',
-    },
-    formControl: {
-      margin: theme.spacing.unit,
-      minWidth: 120,
-    },
-    selectEmpty: {
-      marginTop: theme.spacing.unit * 2,
-    },
-});
+var amount = 1;
 
 class ProductDetail extends Component {
 
     state = {
         item: {},
-        numberOfItems: '',
-        labelWidth: 0,
-        isLoaded: false
+        numberOfItems: 1,
+        amount: 1,
+        isLoaded: false,
+        id: 0
     }
 
     componentDidMount(){
+        amount = 1
         this.fetchItems();
     }
 
     handleChange = event => {
-        this.setState({ numberOfItems: event.target.value });
-      };
+        
+        this.setState({ amount: event.target.value });
+        this.setState({ numberOfItems: event.target.value})
 
-    
+        amount = event.target.value;
+    };
+
+    returnState(){
+        console.log(this.state)
+        return this.state; 
+    }
+
     fetchItems = () => {
         fetch(`https://my-json-server.typicode.com/tdmichaelis/json-api/products/` + this.props.match.params.productId)
         .then(rsp => rsp.json())
@@ -50,11 +47,8 @@ class ProductDetail extends Component {
     }
 
     render() {
-
-        const { classes } = this.props;
         
         if(this.state.isLoaded){
-            console.log(this.state.item)
             return (
                 <div class="productBody">
                     <div className="productContainer single">
@@ -64,22 +58,20 @@ class ProductDetail extends Component {
                             <Typography variant="h5" className="title">{this.state.item.title}</Typography>
                             <Typography variant="h6" className="price">${this.state.item.price}</Typography>
                         <div className="buttonsContainer">
-                            <Link to='/cart' className="link"><div className="productButtons">Add to cart</div></Link>
-                            <FormControl className="select">
+                            <div onClick={() => this.props.addToCart(this.state.item.id)} className="productButtons">Add to cart</div>
+                            <FormControl className="select" >
                                 <InputLabel htmlFor="age-simple">Amount</InputLabel>
                                 <Select
                                     value={this.state.numberOfItems}
                                     onChange={this.handleChange}
                                 >
-                                    <MenuItem value={1}>
-                                        1
-                                    </MenuItem>
+                                    <MenuItem value={1}>1</MenuItem>
                                     <MenuItem value={2}>2</MenuItem>
                                     <MenuItem value={3}>3</MenuItem>
                                     <MenuItem value={4}>4</MenuItem>
-                                    <MenuItem value={2}>5</MenuItem>
-                                    <MenuItem value={3}>10</MenuItem>
-                                    <MenuItem value={4}>50</MenuItem>
+                                    <MenuItem value={5}>5</MenuItem>
+                                    <MenuItem value={10}>10</MenuItem>
+                                    <MenuItem value={50}>50</MenuItem>
                                 </Select>
                             </FormControl>
                             <Link to='/list' className="link"><div className="productButtons">Back</div></Link>
@@ -97,5 +89,19 @@ class ProductDetail extends Component {
         }
     }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+    
+    addToCart : (id) => {
+        console.log(id)
+        for(let a = 0;amount > a; a++){
+            dispatch({
+                id: id,
+                type: 'ADD_ITEM'
+            })
+            }
+        }
+    } 
+)
  
-export default ProductDetail
+export default connect(null,mapDispatchToProps)(ProductDetail)

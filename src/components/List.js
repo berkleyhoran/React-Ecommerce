@@ -6,6 +6,8 @@ import {
     Link
   } from "react-router-dom";
  
+
+
 const CheckedifLoaded = (props) => {
     console.log(props.data.isLoaded)
         if(props.data.isLoaded === true){
@@ -13,12 +15,11 @@ const CheckedifLoaded = (props) => {
                 <div className="listContainer">
                     {
                         props.data.items.map(item => {
-                            console.log(item.id)
                             return(
-                                <Link to={`/detail/${item.id}`} className="title">
+                                <Link to={`/detail/${item.id}`} className="title" key={item.id} >
                                     <div className="productContainer" onClick={props.click}>
                                         <div className="productImageContainer">
-                                            <img className="productImage" key={item.id} alt={item.title} src={(item.img)}></img>
+                                            <img className="productImage" alt={item.title} src={(item.img)}></img>
                                         </div>
                                         <Typography variant="h5" key={'title' + item.id} className="title">{item.title}</Typography>
                                         <Typography variant="h6" key={'price' + item.id} className="price">${item.price}</Typography>
@@ -67,8 +68,6 @@ class List extends Component{
           this.setState({items: allItems, isLoaded: true, redirect: false})
         })
     }
-
-    
 
     render() {
 
