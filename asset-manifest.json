@@ -1,13 +1,13 @@
 {
-  "main.css": "/static/css/main.d2158801.chunk.css",
-  "main.js": "/static/js/main.8e5ba5db.chunk.js",
-  "main.js.map": "/static/js/main.8e5ba5db.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.c5541365.js",
-  "runtime~main.js.map": "/static/js/runtime~main.c5541365.js.map",
-  "static/js/2.310282eb.chunk.js": "/static/js/2.310282eb.chunk.js",
-  "static/js/2.310282eb.chunk.js.map": "/static/js/2.310282eb.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.5e3c36b0d43d34a2ac4a8e6dead10bd8.js": "/precache-manifest.5e3c36b0d43d34a2ac4a8e6dead10bd8.js",
-  "service-worker.js": "/service-worker.js",
-  "static/css/main.d2158801.chunk.css.map": "/static/css/main.d2158801.chunk.css.map"
+  "main.css": "/myapp/static/css/main.d2158801.chunk.css",
+  "main.js": "/myapp/static/js/main.8e5ba5db.chunk.js",
+  "main.js.map": "/myapp/static/js/main.8e5ba5db.chunk.js.map",
+  "runtime~main.js": "/myapp/static/js/runtime~main.778762fe.js",
+  "runtime~main.js.map": "/myapp/static/js/runtime~main.778762fe.js.map",
+  "static/js/2.310282eb.chunk.js": "/myapp/static/js/2.310282eb.chunk.js",
+  "static/js/2.310282eb.chunk.js.map": "/myapp/static/js/2.310282eb.chunk.js.map",
+  "index.html": "/myapp/index.html",
+  "precache-manifest.4ef98737af40e2e78074e171a0c4257a.js": "/myapp/precache-manifest.4ef98737af40e2e78074e171a0c4257a.js",
+  "service-worker.js": "/myapp/service-worker.js",
+  "static/css/main.d2158801.chunk.css.map": "/myapp/static/css/main.d2158801.chunk.css.map"
 }
