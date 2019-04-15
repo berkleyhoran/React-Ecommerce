@@ -27,6 +27,7 @@ class App extends Component {
   }
 
   componentDidMount(){
+    this.setState({value: this.state.value})
     this.search('a')
   }
 
