@@ -31,6 +31,7 @@ class App extends Component {
   }
 
   handleChange = (event, value) => {
+    this.setState({value})
     if(value === 'two'){
       history.push('/cart')
     }
