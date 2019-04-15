@@ -74,7 +74,7 @@ class ProductDetail extends Component {
                                     <MenuItem value={50}>50</MenuItem>
                                 </Select>
                             </FormControl>
-                            <Link to='/list' className="link"><div className="productButtons">Back</div></Link>
+                            <Link to='/list/a' className="link"><div className="productButtons">Back</div></Link>
                         </div>
                     </div>
                 </div>

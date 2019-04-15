@@ -23,24 +23,40 @@ class App extends Component {
 
   state = {
     value: 'one',
+    searchedValue: 'a'
+  }
+
+  componentDidMount(){
+    this.search('a')
   }
 
   handleChange = (event, value) => {
-    this.setState({value});
     if(value === 'two'){
       history.push('/cart')
     }
     else if(value === 'one'){
-      history.push('/list')
+      history.push('/list/' + 'a')
     }
     else if(value === 'three'){
       history.push('/detail/1')
     }
   }
 
+  search = (event) => {
+    if(event !== 'a'){
+      this.setState({searchedValue: event.target.value ,value: this.state.value});
+      history.push('/list/' + event.target.value)
+    }
+    else{
+      history.push('/list/' + event)
+    }
+  }
+
   render() {
 
     const { value } = this.state;
+
+    console.log(this.state.searchedValue)
 
     return (
 
@@ -56,7 +72,7 @@ class App extends Component {
             
             <div className="search elem">
               <SearchIcon className="searchicon" />
-              <InputBase className="searchtext" placeholder="Search…"/>
+              <InputBase className="searchtext" placeholder="Search…" onChange={event => this.search(event)}/>
             </div>
                 
             <div className='tabs elem'>
@@ -70,7 +86,7 @@ class App extends Component {
 
           </Toolbar>
         </AppBar>
-          <Route path='/list/:search' component={List} />
+          <Route path={`/list/` + this.state.searchedValue} component={List} />
           <Route path='/cart' component={Cart} /> 
           <Route path='/detail/:productId' component={ProductDetail} /> 
         </Router>
