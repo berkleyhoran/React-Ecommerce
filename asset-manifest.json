@@ -1,13 +1,13 @@
 {
-  "main.css": "/myapp/static/css/main.d2158801.chunk.css",
-  "main.js": "/myapp/static/js/main.8e5ba5db.chunk.js",
-  "main.js.map": "/myapp/static/js/main.8e5ba5db.chunk.js.map",
-  "runtime~main.js": "/myapp/static/js/runtime~main.778762fe.js",
-  "runtime~main.js.map": "/myapp/static/js/runtime~main.778762fe.js.map",
-  "static/js/2.310282eb.chunk.js": "/myapp/static/js/2.310282eb.chunk.js",
-  "static/js/2.310282eb.chunk.js.map": "/myapp/static/js/2.310282eb.chunk.js.map",
-  "index.html": "/myapp/index.html",
-  "precache-manifest.4ef98737af40e2e78074e171a0c4257a.js": "/myapp/precache-manifest.4ef98737af40e2e78074e171a0c4257a.js",
-  "service-worker.js": "/myapp/service-worker.js",
-  "static/css/main.d2158801.chunk.css.map": "/myapp/static/css/main.d2158801.chunk.css.map"
+  "main.css": "/React-Ecommerce/static/css/main.d2158801.chunk.css",
+  "main.js": "/React-Ecommerce/static/js/main.8e5ba5db.chunk.js",
+  "main.js.map": "/React-Ecommerce/static/js/main.8e5ba5db.chunk.js.map",
+  "runtime~main.js": "/React-Ecommerce/static/js/runtime~main.d3b74b69.js",
+  "runtime~main.js.map": "/React-Ecommerce/static/js/runtime~main.d3b74b69.js.map",
+  "static/js/2.310282eb.chunk.js": "/React-Ecommerce/static/js/2.310282eb.chunk.js",
+  "static/js/2.310282eb.chunk.js.map": "/React-Ecommerce/static/js/2.310282eb.chunk.js.map",
+  "index.html": "/React-Ecommerce/index.html",
+  "precache-manifest.22e00154ebe43e9e7722336634dd8a23.js": "/React-Ecommerce/precache-manifest.22e00154ebe43e9e7722336634dd8a23.js",
+  "service-worker.js": "/React-Ecommerce/service-worker.js",
+  "static/css/main.d2158801.chunk.css.map": "/React-Ecommerce/static/css/main.d2158801.chunk.css.map"
 }
